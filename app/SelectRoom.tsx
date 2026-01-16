@@ -5,7 +5,7 @@ import { rooms } from '../data/rooms';
 import { Colors } from '../constants/Colors';
 
 const SelectRoomScreen = () => {
-  const { side } = useLocalSearchParams();
+  const { side, housekeeper } = useLocalSearchParams();
   const router = useRouter();
   const filteredRooms = rooms.filter(room => room.buildingSide === side);
 
@@ -19,7 +19,7 @@ const SelectRoomScreen = () => {
           <View style={styles.buttonWrapper}>
             <Button 
               title={`Room ${item.roomNumber}`} 
-              onPress={() => router.push({ pathname: 'TaskChecklist', params: { room: JSON.stringify(item) } })} 
+              onPress={() => router.push({ pathname: 'TaskChecklist', params: { room: JSON.stringify(item), housekeeper } })} 
               color={Colors.buttonText}
             />
           </View>

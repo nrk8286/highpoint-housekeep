@@ -4,13 +4,16 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { tasks } from '../data/tasks';
 import { Task } from '../types/Task';
 import { Room } from '../types/Room';
+import { Housekeeper } from '../types/Housekeeper';
 import { completionLogs } from '../data/completion-logs';
+import 'react-native-get-random-values';
 import { v4 as uuidv4 } from 'uuid';
 import { Colors } from '../constants/Colors';
 
 const TaskChecklistScreen = () => {
-  const { room: roomString } = useLocalSearchParams();
+  const { room: roomString, housekeeper: housekeeperString } = useLocalSearchParams();
   const room: Room = JSON.parse(roomString as string);
+  const housekeeper: Housekeeper = JSON.parse(housekeeperString as string);
   const router = useRouter();
 
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
@@ -30,6 +33,7 @@ const TaskChecklistScreen = () => {
         const newLog = {
             id: uuidv4(),
             room,
+            housekeeper,
             completedTasks: completedTaskObjects,
             timestamp: new Date(),
             taskType: taskType
@@ -82,6 +86,9 @@ const TaskChecklistScreen = () => {
       {renderTaskList()}
       <View style={styles.buttonWrapper}>
         <Button title="Save and Go Back" onPress={handleSaveAndGoBack} color={Colors.buttonText}/>
+      </View>
+      <View style={styles.buttonWrapper}>
+        <Button title="Submit Maintenance Request" onPress={() => router.push({ pathname: 'MaintenanceRequest', params: { room: roomString } })} color={Colors.buttonText} />
       </View>
     </View>
   );

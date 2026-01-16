@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Button } from 'react-native';
+import { Link } from 'expo-router';
 import { completionLogs } from '../data/completion-logs';
-import { VictoryBar, VictoryChart, VictoryTheme, VictoryPie } from "victory-native";
+import { VictoryPie } from "victory-native";
 import { Colors } from '../constants/Colors';
 
 const AdminScreen = () => {
@@ -15,6 +16,12 @@ const AdminScreen = () => {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.header}>Admin Dashboard</Text>
+
+            <View style={styles.buttonWrapper}>
+                <Link href="/MaintenanceList" asChild>
+                    <Button title="View Maintenance Requests" color={Colors.buttonText} />
+                </Link>
+            </View>
 
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Cleaning Type Distribution</Text>
@@ -81,7 +88,13 @@ const styles = StyleSheet.create({
     },
     logText: {
         color: Colors.text,
-    }
+    },
+    buttonWrapper: {
+        backgroundColor: Colors.buttonBackground,
+        borderRadius: 8,
+        padding: 10,
+        marginVertical: 5,
+    },
 });
 
 export default AdminScreen;
