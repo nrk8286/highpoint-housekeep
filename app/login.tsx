@@ -14,7 +14,7 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/images/logo.png')} style={styles.logo} />
+      <Image source={require('../assets/images/High-Point-Quincy-Logo-FOR-DARK-BG__TRANS-2048x1365.png')} style={styles.logo} />
       <Text style={styles.title}>Select Your Name</Text>
       <FlatList
         data={housekeepers}

@@ -19,7 +19,7 @@ const SelectRoomScreen = () => {
           <View style={styles.buttonWrapper}>
             <Button 
               title={`Room ${item.roomNumber}`} 
-              onPress={() => router.push({ pathname: 'TaskChecklist', params: { room: JSON.stringify(item), housekeeper } })} 
+              onPress={() => router.push({ pathname: '/TaskChecklist', params: { room: JSON.stringify(item), housekeeper } })} 
               color={Colors.buttonText}
             />
           </View>

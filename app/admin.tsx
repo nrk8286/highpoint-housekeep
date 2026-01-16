@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Button } from 'react-native';
 import { Link } from 'expo-router';
 import { completionLogs } from '../data/completion-logs';
-import { VictoryPie } from "victory-native";
+import { VictoryPie } from "victory-pie";
 import { Colors } from '../constants/Colors';
 
 const AdminScreen = () => {

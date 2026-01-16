@@ -32,7 +32,7 @@ const SelectSideScreen = () => {
 
   const handleSelectSide = (side: string) => {
     router.push({ 
-      pathname: 'SelectRoom', 
+      pathname: '/SelectRoom', 
       params: { 
         side, 
         housekeeper: housekeeperString 

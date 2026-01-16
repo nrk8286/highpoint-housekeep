@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { tasks } from '../data/tasks';
-import { Task } from '../types/Task';
 import { Room } from '../types/Room';
 import { Housekeeper } from '../types/Housekeeper';
 import { completionLogs } from '../data/completion-logs';
@@ -88,7 +87,7 @@ const TaskChecklistScreen = () => {
         <Button title="Save and Go Back" onPress={handleSaveAndGoBack} color={Colors.buttonText}/>
       </View>
       <View style={styles.buttonWrapper}>
-        <Button title="Submit Maintenance Request" onPress={() => router.push({ pathname: 'MaintenanceRequest', params: { room: roomString } })} color={Colors.buttonText} />
+        <Button title="Submit Maintenance Request" onPress={() => router.push({ pathname: '/MaintenanceRequest', params: { room: roomString } })} color={Colors.buttonText} />
       </View>
     </View>
   );
