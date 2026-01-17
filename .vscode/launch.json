@@ -19,6 +19,36 @@
             "request": "launch",
             "platform": "android",
             "enableDebug": false
+        },
+        {
+            "name": "Debug iOS",
+            "cwd": "${workspaceFolder}",
+            "type": "reactnative",
+            "request": "launch",
+            "platform": "ios"
+        },
+        {
+            "name": "Run iOS",
+            "cwd": "${workspaceFolder}",
+            "type": "reactnative",
+            "request": "launch",
+            "platform": "ios",
+            "enableDebug": false
+        },
+        {
+            "name": "Debug Web",
+            "cwd": "${workspaceFolder}",
+            "type": "reactnative",
+            "request": "launch",
+            "platform": "web"
+        },
+        {
+            "name": "Run Web",
+            "cwd": "${workspaceFolder}",
+            "type": "reactnative",
+            "request": "launch",
+            "platform": "web",
+            "enableDebug": false
         }
     ]
 }
