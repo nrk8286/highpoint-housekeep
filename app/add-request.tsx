@@ -1,20 +1,27 @@
-
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
+import { useRouter } from 'expo-router';
 import { v4 as uuidv4 } from 'uuid';
 import { maintenanceRequests } from '../data/maintenance-requests';
+import { Colors } from '../constants/Colors';
 
-export default function AddRequest({ navigation }) {
+export default function AddRequest() {
+  const router = useRouter();
   const [room, setRoom] = useState('');
   const [description, setDescription] = useState('');
 
   const handleAddRequest = () => {
+    if (!room.trim() || !description.trim()) {
+      Alert.alert('Error', 'Please fill in all fields.');
+      return;
+    }
+
     const newRequest = {
       id: uuidv4(),
       room: {
         id: uuidv4(),
         roomNumber: room,
-        buildingSide: 'A', // Assuming a default building side
+        buildingSide: 'A', // Default building side
       },
       description,
       timestamp: new Date(),
@@ -22,9 +29,8 @@ export default function AddRequest({ navigation }) {
     };
 
     maintenanceRequests.push(newRequest);
-
-    // Navigate back to the previous screen
-    navigation.goBack();
+    Alert.alert('Success', 'Request added successfully.');
+    router.back();
   };
 
   return (
@@ -33,16 +39,21 @@ export default function AddRequest({ navigation }) {
       <TextInput
         style={styles.input}
         placeholder="Room Number"
+        placeholderTextColor={Colors.accent}
         value={room}
         onChangeText={setRoom}
       />
       <TextInput
         style={styles.input}
         placeholder="Description"
+        placeholderTextColor={Colors.accent}
         value={description}
         onChangeText={setDescription}
+        multiline
       />
-      <Button title="Add Request" onPress={handleAddRequest} />
+      <View style={styles.buttonWrapper}>
+        <Button title="Add Request" onPress={handleAddRequest} color={Colors.buttonText} />
+      </View>
     </View>
   );
 }
@@ -51,17 +62,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: Colors.primary,
   },
   header: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: Colors.text,
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    backgroundColor: Colors.white,
+    borderRadius: 8,
+    padding: 10,
     marginBottom: 20,
-    paddingHorizontal: 10,
+    minHeight: 40,
+    color: Colors.primary,
+  },
+  buttonWrapper: {
+    backgroundColor: Colors.buttonBackground,
+    borderRadius: 8,
+    padding: 10,
+    marginVertical: 5,
   },
 });
