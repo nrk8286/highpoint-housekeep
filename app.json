@@ -1,19 +1,22 @@
 {
   "expo": {
-    "name": "highpoint-housekeep",
+    "name": "HighPoint Housekeeping",
     "slug": "highpoint-housekeep",
     "version": "1.0.0",
+    "description": "Professional housekeeping and maintenance management solutions for residential properties. Track cleaning tasks, manage maintenance requests, and ensure quality standards.",
     "orientation": "portrait",
     "icon": "./assets/images/High-Point-Quincy-Logo-FOR-DARK-BG__TRANS-2048x1365.png",
     "scheme": "highpointhousekeep",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "primaryColor": "#000000",
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "This app uses the camera to allow you to take pictures of rooms that need cleaning.",
         "NSPhotoLibraryUsageDescription": "This app uses the photo library to allow you to upload pictures of rooms that need cleaning."
-      }
+      },
+      "bundleIdentifier": "com.highpoint.housekeep"
     },
     "android": {
       "adaptiveIcon": {
@@ -26,10 +29,14 @@
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE"
-      ]
+      ],
+      "package": "com.highpoint.housekeep"
     },
     "web": {
-      "output": "static"
+      "output": "static",
+      "favicon": "./assets/images/High-Point-Quincy-Logo-FOR-DARK-BG__TRANS-2048x1365.png",
+      "bundler": "metro",
+      "lang": "en"
     },
     "plugins": [
       "expo-router",

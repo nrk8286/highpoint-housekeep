@@ -1,1 +1,0 @@
-// This file has been replaced by settings.tsx. It is empty to avoid build conflicts.
