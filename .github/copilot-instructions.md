@@ -1,8 +1,8 @@
-Welcome to HighPoint Solutions! This document provides a guide for using the Copilot coding agent within this repository.
+Welcome to HighPoint Housekeep! This document provides a guide for using the Copilot coding agent within this repository.
 
 ## About the Project
 
-HighPoint Solutions is an all-in-one solution designed to streamline housekeeping, maintenance, and compliance for modern facilities. It's built with Next.js for the frontend, uses Genkit for its AI features, and is deployed on Cloudflare Pages.
+HighPoint Housekeep is an Expo Router/React Native application that streamlines housekeeping and maintenance tasks (room selection, requests, checklists, and admin management). The app is built with Expo, React Native, and TypeScript, and uses ESLint for linting.
 
 ## Getting Started
 
@@ -14,28 +14,34 @@ To get the project running locally, follow these steps:
    npm install
    ```
 
-2. **Run the development servers:**
+2. **Run the development server with Expo:**
 
-   This project requires two development servers to be running simultaneously:
+   The interactive Expo dev server lets you choose the target platform.
 
-   * **Next.js development server:**
+   ```bash
+   npm start
+   ```
+
+   Helpful platform-specific scripts:
+
+   * **Android preview:**
 
      ```bash
-     npm run dev
+     npm run android
      ```
 
-   * **Genkit development server:**
+   * **Web preview (port 8082):**
 
      ```bash
-     npm run genkit:dev
+     npm run web
      ```
+
+3. **Lint the project:**
+
+   ```bash
+   npm run lint
+   ```
 
 ## Deployment
 
-This project is configured for continuous deployment with Cloudflare Pages. Any changes pushed to the `main` branch will automatically be deployed.
-
-To manually deploy the project, you can use the following command:
-
-```bash
-npm run deploy
-```
+This project does not define a deployment script. Build and distribute the app using Expo tooling (e.g., EAS Build/Submit) or your chosen platform-specific pipeline.
