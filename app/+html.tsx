@@ -22,19 +22,21 @@ export default function Root({ children }: PropsWithChildren) {
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph / Facebook */}
+        {/* Note: Update og-image.png with a 1200x630px image for optimal social media sharing */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://highpoint-housekeep.com/" />
         <meta property="og:title" content="HighPoint Housekeeping - Professional Property Management" />
         <meta property="og:description" content="Professional housekeeping and maintenance management solutions for residential properties." />
-        <meta property="og:image" content="https://highpoint-housekeep.com/og-image.png" />
+        <meta property="og:image" content="https://highpoint-housekeep.com/High-Point-Quincy-Logo-FOR-DARK-BG__TRANS-2048x1365.png" />
         <meta property="og:site_name" content="HighPoint Housekeeping" />
         
         {/* Twitter */}
+        {/* Note: Update twitter-image.png with a 1200x675px image for optimal Twitter cards */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://highpoint-housekeep.com/" />
         <meta property="twitter:title" content="HighPoint Housekeeping - Professional Property Management" />
         <meta property="twitter:description" content="Professional housekeeping and maintenance management solutions for residential properties." />
-        <meta property="twitter:image" content="https://highpoint-housekeep.com/twitter-image.png" />
+        <meta property="twitter:image" content="https://highpoint-housekeep.com/High-Point-Quincy-Logo-FOR-DARK-BG__TRANS-2048x1365.png" />
         
         {/* Theme Color */}
         <meta name="theme-color" content="#000000" />
