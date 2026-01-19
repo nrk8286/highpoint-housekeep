@@ -1,4 +1,4 @@
-Welcome to HighPoint Housekeep! This document provides a guide for using the Copilot coding agent within this repository.
+Welcome to HighPoint Housekeep! This document provides a guide for using the Copilot coding agent within this repository. Please review it before starting work.
 
 ## About the Project
 
@@ -24,7 +24,7 @@ To get the project running locally, follow these steps:
 
    Helpful platform-specific scripts:
 
-   * **Android preview:**
+   * **Android (starts Expo dev server targeting Android):**
 
      ```bash
      npm run android
