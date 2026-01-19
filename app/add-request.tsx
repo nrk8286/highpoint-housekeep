@@ -5,6 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { maintenanceRequests } from '../data/maintenance-requests';
 import { Colors } from '../constants/Colors';
 
+const DEFAULT_BUILDING_SIDE = 'A';
+
 export default function AddRequest() {
   const router = useRouter();
   const [room, setRoom] = useState('');
@@ -21,7 +23,7 @@ export default function AddRequest() {
       room: {
         id: uuidv4(),
         roomNumber: room,
-        buildingSide: 'A', // Default building side
+        buildingSide: DEFAULT_BUILDING_SIDE,
       },
       description,
       timestamp: new Date(),

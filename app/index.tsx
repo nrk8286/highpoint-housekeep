@@ -24,7 +24,7 @@ const SelectSideScreen = () => {
   const housekeeper: Housekeeper = JSON.parse(housekeeperString as string);
 
   let sides: string[] = [];
-  if (housekeeper.name === 'Audry') {
+  if (housekeeper.name === 'Audrey') {
     sides = ['A', 'D'];
   } else if (housekeeper.name === 'Hannah Steele') {
     sides = ['B', 'C'];
