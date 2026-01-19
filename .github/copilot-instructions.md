@@ -30,6 +30,12 @@ To get the project running locally, follow these steps:
      npm run android
      ```
 
+   * **iOS (starts Expo dev server targeting iOS):**
+
+     ```bash
+     npm run ios
+     ```
+
    * **Web preview (port 8082):**
 
      ```bash
