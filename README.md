@@ -4,6 +4,28 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## 🚀 Deployment
+
+This project is configured for deployment to [Cloudflare Pages](https://pages.cloudflare.com/) for the `highpoints.work` domain.
+
+### Quick Deploy
+
+```bash
+# Build the web app
+npm run build:web
+
+# Deploy to Cloudflare Pages (requires Wrangler CLI)
+wrangler pages deploy dist --project-name=highpoint-housekeep
+```
+
+For detailed deployment instructions, including:
+- Automated deployment via GitHub Actions
+- Custom domain configuration for highpoints.work
+- MCP server configuration for AI assistants
+- Manual deployment options
+
+See **[DEPLOYMENT.md](./DEPLOYMENT.md)** for the complete guide.
+
 ## Get started
 
 #### Android
