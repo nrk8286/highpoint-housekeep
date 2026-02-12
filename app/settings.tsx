@@ -16,6 +16,7 @@ export default function Settings() {
         const cameraStatus = await Camera.requestCameraPermissionsAsync();
         if (isMounted) {
           setHasCameraPermission(cameraStatus.status === 'granted');
+        }
 
         const galleryStatus = await ImagePicker.requestMediaLibraryPermissionsAsync();
         if (isMounted) {
