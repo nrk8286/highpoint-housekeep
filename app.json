@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "GPT Market Plus",
-    "slug": "gpt-market-plus",
+    "name": "HighPoint Housekeeping",
+    "slug": "highpoint-housekeep",
     "version": "1.0.1",
     "description": "Property services workflow management for housekeeping and maintenance teams.",
     "orientation": "portrait",
     "icon": "./assets/images/High-Point-Quincy-Logo-FOR-DARK-BG__TRANS-2048x1365.png",
-    "scheme": "gptmarketplus",
+    "scheme": "highpoint-housekeep",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "primaryColor": "#000000",
