@@ -1,7 +1,7 @@
 {
-  "name": "HighPoint Housekeeping",
-  "short_name": "HighPoint",
-  "description": "Professional housekeeping and maintenance management solutions for residential properties",
+  "name": "GPT Market Plus",
+  "short_name": "GPT Market",
+  "description": "Property services workflow management for housekeeping and maintenance teams",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

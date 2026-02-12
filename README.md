@@ -1,6 +1,8 @@
 > Edited for use in IDX on 07/09/12
 
-# Welcome to your Expo app 👋
+# Welcome to GPT Market Plus 👋
+
+GPT Market Plus is an Expo app for property services workflow management, covering housekeeping and maintenance tasks.
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 

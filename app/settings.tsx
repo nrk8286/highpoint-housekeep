@@ -9,13 +9,29 @@ export default function Settings() {
   const [hasGalleryPermission, setHasGalleryPermission] = useState<boolean | null>(null);
 
   useEffect(() => {
-    (async () => {
-      const cameraStatus = await Camera.requestCameraPermissionsAsync();
-      setHasCameraPermission(cameraStatus.status === 'granted');
+    let isMounted = true;
 
-      const galleryStatus = await ImagePicker.requestMediaLibraryPermissionsAsync();
-      setHasGalleryPermission(galleryStatus.status === 'granted');
+    (async () => {
+      try {
+        const cameraStatus = await Camera.requestCameraPermissionsAsync();
+        if (isMounted) {
+          setHasCameraPermission(cameraStatus.status === 'granted');
+
+        const galleryStatus = await ImagePicker.requestMediaLibraryPermissionsAsync();
+        if (isMounted) {
+          setHasGalleryPermission(galleryStatus.status === 'granted');
+        }
+      } catch {
+        if (isMounted) {
+          setHasCameraPermission(false);
+          setHasGalleryPermission(false);
+        }
+      }
     })();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (

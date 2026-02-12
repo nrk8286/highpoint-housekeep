@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "HighPoint Housekeeping",
-    "slug": "highpoint-housekeep",
-    "version": "1.0.0",
-    "description": "Professional housekeeping and maintenance management solutions for residential properties. Track cleaning tasks, manage maintenance requests, and ensure quality standards.",
+    "name": "GPT Market Plus",
+    "slug": "gpt-market-plus",
+    "version": "1.0.1",
+    "description": "Property services workflow management for housekeeping and maintenance teams.",
     "orientation": "portrait",
     "icon": "./assets/images/High-Point-Quincy-Logo-FOR-DARK-BG__TRANS-2048x1365.png",
-    "scheme": "highpointhousekeep",
+    "scheme": "gptmarketplus",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "primaryColor": "#000000",
