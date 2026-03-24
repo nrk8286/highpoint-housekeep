@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "highpoint-housekeep": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/home/runner/work/highpoint-housekeep/highpoint-housekeep"
+      ],
+      "description": "HighPoint Housekeep project filesystem access for AI assistants",
+      "metadata": {
+        "project": "highpoint-housekeep",
+        "type": "expo-react-native-app",
+        "capabilities": [
+          "read_files",
+          "list_directory",
+          "search_files"
+        ]
+      }
+    }
+  }
+}
