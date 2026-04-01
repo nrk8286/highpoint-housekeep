@@ -24,6 +24,7 @@ export default function AddRequest() {
         id: uuidv4(),
         roomNumber: room,
         buildingSide: DEFAULT_BUILDING_SIDE,
+        buildingSide: 'A', // Default building side
       },
       description,
       timestamp: new Date(),

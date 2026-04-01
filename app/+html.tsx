@@ -62,6 +62,7 @@ export default function Root({ children }: PropsWithChildren) {
               description: 'Professional housekeeping and maintenance management solutions',
               url: 'https://highpoint-housekeep.com',
               logo: 'https://highpoint-housekeep.com/android-chrome-512x512.png',
+              logo: 'https://highpoint-housekeep.com/logo.png',
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'Customer Service',
